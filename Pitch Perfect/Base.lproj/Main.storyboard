@@ -25,28 +25,45 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1ru-cZ-SDQ"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwf-qO-FLw">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <color key="textColor" red="0.14509803921568626" green="0.28235294117647058" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="162" y="458" width="77" height="22"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Cwf-qO-FLw" secondAttribute="centerX" constant="-0.5" id="Mcs-DI-NiY"/>
                             <constraint firstAttribute="centerY" secondItem="vZm-EW-dlb" secondAttribute="centerY" id="OAt-Fb-KXm"/>
+                            <constraint firstItem="Cwf-qO-FLw" firstAttribute="top" secondItem="vZm-EW-dlb" secondAttribute="bottom" constant="8" id="UHy-eZ-Cae"/>
                             <constraint firstAttribute="centerX" secondItem="vZm-EW-dlb" secondAttribute="centerX" id="v2o-UK-Hoz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vZm-EW-dlb"/>
+                                <exclude reference="Cwf-qO-FLw"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="OAt-Fb-KXm"/>
                                 <exclude reference="v2o-UK-Hoz"/>
+                                <exclude reference="Mcs-DI-NiY"/>
+                                <exclude reference="UHy-eZ-Cae"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vZm-EW-dlb"/>
+                                <include reference="Cwf-qO-FLw"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="OAt-Fb-KXm"/>
                                 <include reference="v2o-UK-Hoz"/>
+                                <include reference="Mcs-DI-NiY"/>
+                                <include reference="UHy-eZ-Cae"/>
                             </mask>
                         </variation>
                     </view>
