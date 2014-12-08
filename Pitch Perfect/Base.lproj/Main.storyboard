@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uEh-oQ-1jN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -59,12 +60,12 @@
                                 <exclude reference="mp3-0i-vmg"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Mbw-Wp-D7g"/>
-                                <exclude reference="v2o-UK-Hoz"/>
+                                <exclude reference="JcX-el-TB3"/>
                                 <exclude reference="Mcs-DI-NiY"/>
                                 <exclude reference="UHy-eZ-Cae"/>
                                 <exclude reference="whv-eb-yHV"/>
-                                <exclude reference="JcX-el-TB3"/>
+                                <exclude reference="Mbw-Wp-D7g"/>
+                                <exclude reference="v2o-UK-Hoz"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -74,12 +75,12 @@
                                 <include reference="mp3-0i-vmg"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Mbw-Wp-D7g"/>
-                                <include reference="v2o-UK-Hoz"/>
+                                <include reference="JcX-el-TB3"/>
                                 <include reference="Mcs-DI-NiY"/>
                                 <include reference="UHy-eZ-Cae"/>
                                 <include reference="whv-eb-yHV"/>
-                                <include reference="JcX-el-TB3"/>
+                                <include reference="Mbw-Wp-D7g"/>
+                                <include reference="v2o-UK-Hoz"/>
                             </mask>
                         </variation>
                     </view>
@@ -94,15 +95,16 @@
             </objects>
             <point key="canvasLocation" x="825" y="401.25"/>
         </scene>
-        <!--Play Sound View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="SSP-2o-lA9">
             <objects>
-                <viewController id="VTQ-0J-Ndd" customClass="PlaySoundViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VTQ-0J-Ndd" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mJw-Zx-FBu"/>
                         <viewControllerLayoutGuide type="bottom" id="Zmu-uG-wSW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zkH-WM-lGQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BO2-lo-1AE">
@@ -111,31 +113,65 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playSlow:" destination="VTQ-0J-Ndd" eventType="touchUpInside" id="647-jN-BZf"/>
+                                    <action selector="playSlowAudio:" destination="VTQ-0J-Ndd" eventType="touchUpInside" id="d9P-Tb-vqq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6i-R0-bdk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="rabbit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playFastAudio:" destination="VTQ-0J-Ndd" eventType="touchUpInside" id="Q4Q-Py-nR0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG1-6I-iNv">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stopbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAudio:" destination="VTQ-0J-Ndd" eventType="touchUpInside" id="Jk4-B2-hT7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Q6i-R0-bdk" firstAttribute="top" secondItem="mJw-Zx-FBu" secondAttribute="bottom" constant="57" id="LoP-rG-c4S"/>
+                            <constraint firstItem="Zmu-uG-wSW" firstAttribute="top" secondItem="eG1-6I-iNv" secondAttribute="bottom" constant="60" id="OHv-ae-YOP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q6i-R0-bdk" secondAttribute="trailing" constant="48" id="V0E-zj-68J"/>
                             <constraint firstItem="BO2-lo-1AE" firstAttribute="leading" secondItem="zkH-WM-lGQ" secondAttribute="leadingMargin" constant="48" id="ges-Mw-l6B"/>
                             <constraint firstItem="BO2-lo-1AE" firstAttribute="top" secondItem="mJw-Zx-FBu" secondAttribute="bottom" constant="57" id="jRr-ew-49W"/>
+                            <constraint firstAttribute="centerX" secondItem="eG1-6I-iNv" secondAttribute="centerX" id="mvL-ad-rs6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="BO2-lo-1AE"/>
+                                <exclude reference="Q6i-R0-bdk"/>
+                                <exclude reference="eG1-6I-iNv"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="ges-Mw-l6B"/>
                                 <exclude reference="jRr-ew-49W"/>
+                                <exclude reference="LoP-rG-c4S"/>
+                                <exclude reference="V0E-zj-68J"/>
+                                <exclude reference="mvL-ad-rs6"/>
+                                <exclude reference="OHv-ae-YOP"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="BO2-lo-1AE"/>
+                                <include reference="Q6i-R0-bdk"/>
+                                <include reference="eG1-6I-iNv"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="ges-Mw-l6B"/>
                                 <include reference="jRr-ew-49W"/>
+                                <include reference="LoP-rG-c4S"/>
+                                <include reference="V0E-zj-68J"/>
+                                <include reference="mvL-ad-rs6"/>
+                                <include reference="OHv-ae-YOP"/>
                             </mask>
                         </variation>
                     </view>
@@ -165,6 +201,7 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="rabbit" width="100" height="100"/>
         <image name="snail" width="100" height="100"/>
         <image name="stopbutton" width="50" height="50"/>
     </resources>
