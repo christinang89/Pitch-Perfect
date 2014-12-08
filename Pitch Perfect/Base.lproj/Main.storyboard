@@ -175,16 +175,16 @@
                                 <exclude reference="jSi-j4-dgC"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="OHv-ae-YOP"/>
                                 <exclude reference="ges-Mw-l6B"/>
                                 <exclude reference="jRr-ew-49W"/>
                                 <exclude reference="LoP-rG-c4S"/>
                                 <exclude reference="V0E-zj-68J"/>
+                                <exclude reference="mvL-ad-rs6"/>
                                 <exclude reference="QR7-Xf-h1u"/>
                                 <exclude reference="c8D-ig-uc8"/>
                                 <exclude reference="ofX-Ki-EPd"/>
                                 <exclude reference="spy-FE-rWL"/>
-                                <exclude reference="mvL-ad-rs6"/>
-                                <exclude reference="OHv-ae-YOP"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -196,16 +196,16 @@
                                 <include reference="jSi-j4-dgC"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="OHv-ae-YOP"/>
                                 <include reference="ges-Mw-l6B"/>
                                 <include reference="jRr-ew-49W"/>
                                 <include reference="LoP-rG-c4S"/>
                                 <include reference="V0E-zj-68J"/>
+                                <include reference="mvL-ad-rs6"/>
                                 <include reference="QR7-Xf-h1u"/>
                                 <include reference="c8D-ig-uc8"/>
                                 <include reference="ofX-Ki-EPd"/>
                                 <include reference="spy-FE-rWL"/>
-                                <include reference="mvL-ad-rs6"/>
-                                <include reference="OHv-ae-YOP"/>
                             </mask>
                         </variation>
                     </view>
